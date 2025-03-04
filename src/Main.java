@@ -51,13 +51,11 @@ public class Main {
             System.out.println("Неверный формат даты. Пожалуйста, используйте 'дд.мм.гггг'.");
             return;
         }
-
-        // Подсчет рабочих дней между двумя датами
         int workingDaysBetween = countWorkingDaysBetween(date1, date2);
         System.out.println("Количество рабочих дней между введенными датами: " + workingDaysBetween);
-
         scanner.close();
     }
+    
     // Метод для добавления рабочих дней
     public static Date addWorkingDays(Date date, int workingDays) {
         Calendar calendar = Calendar.getInstance();
@@ -80,7 +78,7 @@ public class Main {
         Calendar endCalendar = Calendar.getInstance();
         endCalendar.setTime(endDate);
 
-        // Убедимся, что startDate меньше endDate
+        // Проверка на то что даты идут по возрастанию startDate меньше endDate
         if (startCalendar.after(endCalendar)) {
             Calendar temp = startCalendar;
             startCalendar = endCalendar;
