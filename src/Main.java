@@ -94,4 +94,5 @@ public class Main {
             startCalendar.add(Calendar.DAY_OF_MONTH, 1);
         }
         return workingDays > 0 ? workingDays - 1 : 0;
-    }}
+    }
+}
